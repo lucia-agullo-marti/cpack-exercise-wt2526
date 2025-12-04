@@ -3,6 +3,7 @@
 # -----------------------------
 
 set(CPACK_PACKAGE_NAME "cpackexample")
+set(CPACK_PACKAGE_VERSION "1.0.0")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CPack Exercise")
 set(CPACK_PACKAGE_VENDOR "Lucia Agullo Marti")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/lucia-agullo-marti/cpack-exercise-wt2526")
@@ -17,4 +18,7 @@ set(CPACK_STRIP_FILES TRUE)
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Lucia Agullo Marti")
 set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "CPack exercise for the Simulation Software Engineering course (Winter Term 2025/2026)")
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-set(CPACK_DEBIAN_PACKAGE_FILE_NAME "DEB-DEFAULT")
+set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}")
+
+# Debian dependencies
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6, libboost-filesystem1.83-dev, libyaml-cpp-dev")
