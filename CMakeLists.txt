@@ -37,3 +37,6 @@ install(FILES
     yamlParser/yamlParser.hpp
     DESTINATION include/cpackexamplelib
 )
+
+include(cmake/CPackConfig.cmake)
+include(CPack)
